@@ -1,0 +1,132 @@
+﻿<Window x:Class="AlarmClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlarmClock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="OnClosing">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <ItemsControl Margin="0,110,0,100" Name="H1" Grid.Column="0">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl Margin="0,110,0,100" Name="H0" Grid.Column="1">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl Margin="0,110,0,100" Name="M1" Grid.Column="2">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl Margin="0,110,0,100" Name="M0" Grid.Column="3">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl Margin="0,110,0,100" Name="S1" Grid.Column="4">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <ItemsControl Margin="0,110,0,100" Name="S0" Grid.Column="5">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Canvas VerticalAlignment="Top">
+                        <Rectangle
+                            Fill="{Binding Fill}"
+                            Height="{Binding Height}"
+                            Width="{Binding Width}"
+                            Canvas.Top="{Binding CanvasTop}"
+                            Canvas.Left ="{Binding CanvasLeft}">
+                        </Rectangle>
+                    </Canvas>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Ellipse
+            Width="10"
+            Height="10"
+            Fill="Blue" Grid.Column="1" Margin="112,250,0,109"
+             />
+        <Ellipse
+            Width="10"
+            Height="10"
+            Fill="Blue" Grid.Column="1" Margin="112,180,0,219"
+             />
+        <Ellipse
+            Width="10"
+            Height="10"
+            Fill="Blue" Grid.Column="3" Margin="112,250,0,109"
+             />
+        <Ellipse
+            Width="10"
+            Height="10"
+            Fill="Blue" Grid.Column="3" Margin="112,180,0,219"
+             />
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="66,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Foreground="#FFFFF300" Text="{Binding TimeTM}"/></TextBlock>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Foreground="#FFFFF300" FontSize="24" Text="{Binding AlarmText}"/></TextBlock>
+    </Grid>
+</Window>
